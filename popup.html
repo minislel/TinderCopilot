@@ -1,38 +1,39 @@
-<!-- popup.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Tinder Copilot</title>
+    <meta charset="utf-8"></meta>
     <style>
       body {
         font-family: sans-serif;
         padding: 10px;
+        width: 300px;
       }
-      button {
-        margin: 5px;
-        padding: 8px;
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        color: blue;
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <h3>🔥 Tinder Copilot AI</h3>
-    <div id="auth">
-      <button id="loginBtn">ZALOGUJ</button>
-      <input
-        type="password"
-        id="key"
-        placeholder="Wklej swój klucz API"
-        style="width: 100%; display: none"
-      />
-      <button id="save" style="display: none; margin-top: 5px">
-        Zapisz klucz
-      </button>
-    </div>
-    <div id="actions" style="display: none">
-      <button id="testGen">Test AI Reply</button>
-      <div id="result" style="margin-top: 10px"></div>
-    </div>
+    <h3>🔑 Wklej swój klucz Gemini</h3>
+    <input id="apiKeyInput" placeholder="sk-..." />
+    <button id="saveBtn">💾 Zapisz</button>
+    <p id="status"></p>
+
+    <a
+      href="https://aistudio.google.com/app/apikey"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔗 Otwórz AI Studio (w nowej karcie)
+    </a>
+
     <script src="popup.js"></script>
   </body>
 </html>

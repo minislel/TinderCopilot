@@ -1,4 +1,16 @@
-const GEMINI_API_KEY = "Dude... Its cringe dude...";
+let GEMINI_API_KEY = "Dude... Its cringe dude...";
+chrome.storage.local.get("geminiKey", (result) => {
+  if (!result.geminiKey) {
+    console.error("🔐 Klucza brak! Idź do popupu i ustaw!");
+    return;
+  }
+
+  GEMINI_API_KEY = result.geminiKey;
+  console.log("🔑 Globalny klucz ustawiony:", GEMINI_API_KEY);
+
+  // Możesz tutaj zawołać jakąś funkcję, która potrzebuje klucza
+  // np. autoFetchSomething();
+});
 
 async function getProfile(id) {
   try {
